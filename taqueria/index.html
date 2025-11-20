@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Taquería El Rayo ⚡ | Los mejores de Chihuahua</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+
+    <header class="hero" style="background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('tacos-portada.jpg');">
+        <div class="hero-content">
+            <h1>Taquería El Rayo ⚡</h1>
+            <p>La auténtica tradición de Chihuahua desde 1998</p>
+            <div id="estado-negocio" class="aviso">Consultando horario...</div>
+            <br>
+            <a href="#menu" class="boton-cta">Ver el Menú</a>
+        </div>
+    </header>
+
+    <section class="seccion-blanca">
+        <div class="container">
+            <h2>¿Quiénes Somos?</h2>
+            <p>Somos un negocio familiar apasionado por el buen sabor. Usamos tortillas hechas a mano y salsas molcajeteadas todos los días. ¡El verdadero sabor del norte!</p>
+        </div>
+    </section>
+
+    <section id="menu" class="contenido">
+        <h2>🔥 Favoritos del Chef</h2>
+        
+        <div class="menu-grid">
+            <div class="tarjeta-comida">
+                <img src="tacos-menu.jpg" alt="Orden de Tacos"> 
+                <div class="info-plato">
+                    <h3>Orden de Pastor (5 pzas)</h3>
+                    <p>Con piña asada, cilantro, cebolla y salsa de la casa.</p>
+                    <span class="precio">$85 MXN</span>
+                </div>
+            </div>
+
+            <div class="tarjeta-comida">
+                <img src="tacos-menu.jpg" alt="Gringa"> 
+                <div class="info-plato">
+                    <h3>Gringa Gigante</h3>
+                    <p>Doble tortilla de harina, mucho queso y carne al pastor.</p>
+                    <span class="precio">$70 MXN</span>
+                </div>
+            </div>
+
+            <div class="tarjeta-comida">
+                <img src="tacos-menu.jpg" alt="Refresco"> 
+                <div class="info-plato">
+                    <h3>Coca-Cola de Vidrio</h3>
+                    <p>Bien helada para bajar los tacos.</p>
+                    <span class="precio">$25 MXN</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="seccion-testimonios">
+        <h2>Lo que dicen nuestros clientes</h2>
+        <div class="testimonio">
+            <p>"⭐⭐⭐⭐⭐ Los mejores tacos que he probado cerca de la Deportiva. Súper recomendados."</p>
+            <p class="autor">- Juan Pérez</p>
+        </div>
+    </section>
+
+    <section class="mapa-container">
+        <h2>📍 Visítanos</h2>
+        <p>Estamos a dos cuadras de la Ciudad Deportiva.</p>
+        <p class="direccion-texto">Av. Tecnológico y Av. División del Norte, Chihuahua, Chih.</p>
+        
+        <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3501.679283750546!2d-106.0813426849635!3d28.63934898241509!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86ea435267b91927%3A0x712c5c9609f6050!2sCiudad%20Deportiva!5e0!3m2!1ses-419!2smx!4v1675123456789!5m2!1ses-419!2smx" 
+            width="100%" 
+            height="350" 
+            style="border:0; border-radius: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.1);" 
+            allowfullscreen="" 
+            loading="lazy">
+        </iframe>
+    </section>
+
+    <footer class="pie-pagina">
+        <h3>¿Tienes hambre?</h3>
+        <a href="https://wa.me/5216141018461?text=Hola,%20quiero%20pedir%20tacos" class="boton-whatsapp" target="_blank">
+            <i class="fa-brands fa-whatsapp"></i> Pedir por WhatsApp
+        </a>
+        <p class="legal">© 2025 Taquería El Rayo. Desarrollado por Alexis.</p>
+    </footer>
+
+    <script>
+        const hora = new Date().getHours();
+        const aviso = document.getElementById('estado-negocio');
+        
+        // Abierto de 6 PM (18) a 2 AM (2)
+        if (hora >= 18 || hora <= 2) {
+            aviso.innerHTML = "🟢 ABIERTO AHORA";
+            aviso.style.background = "#d4edda";
+            aviso.style.color = "#155724";
+        } else {
+            aviso.innerHTML = "🔴 CERRADO (Abrimos 6 PM)";
+            aviso.style.background = "#f8d7da";
+            aviso.style.color = "#721c24";
+        }
+    </script>
+</body>
+</html>
