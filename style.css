@@ -1,143 +1,44 @@
-/* IMPORTAR FUENTE MODERNA */
+/* 1. FUENTES */
 @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;500;700&display=swap');
 
+/* 2. VARIABLES DE COLOR */
 :root {
-    --primary: #4facfe; /* Azul Neón */
-    --secondary: #00f2fe; /* Celeste */
-    --dark: #0f172a; /* Azul muy oscuro (casi negro) */
-    --glass: rgba(255, 255, 255, 0.05); /* Efecto cristal */
-    --text: #e2e8f0;
+    --primary: #4facfe;       /* Azul Neón */
+    --secondary: #00f2fe;     /* Celeste */
+    --dark: #0f172a;          /* Fondo Azul Oscuro Profundo */
+    --card-bg: #1e293b;       /* Fondo de tarjetas */
+    --glass: rgba(255, 255, 255, 0.03); /* Efecto cristal */
+    --text: #e2e8f0;          /* Texto claro */
 }
 
-/* --- INICIO DEL NUEVO FONDO --- */
-
+/* 3. ESTILOS GENERALES */
 body {
     font-family: 'Outfit', sans-serif;
     margin: 0;
     padding: 0;
-    /* Color de fondo base más profundo */
-    background-color: #050a15; 
+    background-color: var(--dark);
     color: var(--text);
-    overflow-x: hidden;
-    perspective: 1000px; /* Necesario para el efecto 3D */
+    overflow-x: hidden; /* Evita scroll horizontal */
 }
 
-/* FONDO CYBER GRID ANIMADO */
+/* 4. EL FONDO "NEBULA" (EL EFECTO MÁGICO) */
+/* Esto crea una luz azul detrás de tu foto */
 .background-animation {
     position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    z-index: -2;
-    /* Este gradiente crea la ilusión de una rejilla en el suelo */
-    background-image: 
-        linear-gradient(rgba(79, 172, 254, 0.1) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(79, 172, 254, 0.1) 1px, transparent 1px);
-    background-size: 50px 50px;
-    background-position: center center;
-    transform: rotateX(60deg) scale(2); /* Inclinamos la rejilla para dar 3D */
-    transform-origin: top center;
-    animation: moveGrid 15s linear infinite; /* Hacemos que se mueva */
-    /* Un degradado encima para que se desvanezca hacia el horizonte */
-    mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 40%);
-    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 40%);
+    top: -100px;           /* Posición detrás de tu cabeza */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 600px;
+    /* Luz azul suave degradada */
+    background: radial-gradient(circle, rgba(79, 172, 254, 0.2) 0%, transparent 70%);
+    filter: blur(80px);    /* Difuminado fuerte para que se vea suave */
+    z-index: -1;           /* Se va al fondo */
+    pointer-events: none;  /* Para que no estorbe al click */
+    animation: glow 6s ease-in-out infinite alternate;
 }
 
-/* Animación para que la rejilla parezca que avanza */
-@keyframes moveGrid {
-    0% { background-position: center 0; }
-    100% { background-position: center 50px; }
-}
-
-/* --- FIN DEL NUEVO FONDO --- */
-
-.main-container { max-width: 900px; margin: 0 auto; padding: 20px; }
-
-/* HERO SECTION */
-.hero {
-    text-align: center;
-    padding: 80px 20px;
-    animation: fadeIn 1.5s ease;
-}
-
-.foto-perfil {
-    width: 150px; height: 150px;
-    border-radius: 50%;
-    border: 4px solid var(--primary);
-    box-shadow: 0 0 20px rgba(79, 172, 254, 0.5); /* Resplandor azul */
-    object-fit: cover;
-    margin-bottom: 20px;
-}
-
-.saludo { font-size: 1.2rem; color: var(--secondary); letter-spacing: 2px; margin-bottom: 5px; }
-h1 { font-size: 3.5rem; margin: 0; background: linear-gradient(to right, #fff, #aaa); -webkit-background-clip: text; color: transparent; }
-
-/* EFECTO DE ESCRITURA */
-.typing-container { 
-    font-size: 1.5rem; color: var(--primary); margin: 10px 0; font-weight: bold;
-}
-
-.bio-corta { color: #94a3b8; max-width: 500px; margin: 20px auto; }
-
-/* BOTONES NEÓN */
-.botones-hero { margin-top: 30px; display: flex; gap: 15px; justify-content: center; }
-
-.btn-primary {
-    background: linear-gradient(45deg, var(--primary), var(--secondary));
-    color: var(--dark); padding: 12px 30px; border-radius: 50px;
-    text-decoration: none; font-weight: bold; box-shadow: 0 5px 15px rgba(79, 172, 254, 0.4);
-    transition: 0.3s;
-}
-
-.btn-secondary {
-    background: transparent; border: 2px solid var(--primary);
-    color: var(--primary); padding: 12px 30px; border-radius: 50px;
-    text-decoration: none; font-weight: bold; transition: 0.3s;
-}
-
-.btn-primary:hover { transform: translateY(-3px); box-shadow: 0 10px 25px rgba(79, 172, 254, 0.6); }
-.btn-secondary:hover { background: rgba(79, 172, 254, 0.1); }
-
-/* EFECTO CRISTAL (GLASSMORPHISM) */
-.glass-card {
-    background: var(--glass);
-    backdrop-filter: blur(10px); /* Efecto borroso detrás */
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 30px; border-radius: 20px; text-align: center;
-    transition: 0.3s;
-}
-
-.glass-card:hover { transform: translateY(-5px); background: rgba(255,255,255,0.08); }
-.icono-card { font-size: 2.5rem; color: var(--secondary); margin-bottom: 15px; }
-
-.grid-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px; }
-.titulo-seccion { text-align: center; font-size: 2rem; margin-top: 80px; color: white; }
-
-/* PROYECTOS */
-.proyecto-card {
-    display: flex; background: #1e293b; border-radius: 20px; overflow: hidden;
-    margin-bottom: 30px; border: 1px solid rgba(255,255,255,0.05);
-    flex-wrap: wrap;
-}
-
-.img-container { flex: 1; min-width: 300px; }
-.img-container img { width: 100%; height: 100%; object-fit: cover; transition: 0.5s; }
-.proyecto-card:hover img { transform: scale(1.05); }
-
-.info-proyecto { flex: 1; padding: 30px; display: flex; flex-direction: column; justify-content: center; }
-.info-proyecto h3 { color: var(--secondary); margin-top: 0; font-size: 1.5rem; }
-.btn-mini { 
-    align-self: flex-start; margin-top: 15px; text-decoration: none; 
-    color: white; border-bottom: 2px solid var(--primary); padding-bottom: 5px;
-}
-
-/* FOOTER */
-footer { text-align: center; padding: 50px 0; margin-top: 50px; border-top: 1px solid rgba(255,255,255,0.1); }
-.redes-sociales { display: flex; justify-content: center; gap: 20px; margin: 30px 0; }
-.social-link { 
-    font-size: 2rem; color: #94a3b8; transition: 0.3s; 
-}
-.social-link:hover { color: var(--primary); transform: scale(1.2); }
-.whatsapp:hover { color: #25D366; }
-.linkedin:hover { color: #0077b5; }
-.github:hover { color: white; }
-
-@keyframes fadeIn { from { opacity: 0; transform: translateY(20px); } to { opacity: 1; transform: translateY(0); } }
+/* Animación de "respiración" de la luz */
+@keyframes glow {
+    0% { opacity: 0.5; transform: translateX(-50%) scale(1); }
+    10
