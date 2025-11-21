@@ -9,78 +9,88 @@
 </head>
 <body>
 
-    <header class="hero">
-        <div class="perfil-container">
-            <img src="mifoto.jpg" alt="Foto de perfil" class="foto-perfil">
-            <h1>Hola, soy <span class="resaltado">Jesus Alexis Jimenez Aldaba</span></h1>
-            <p>Desarrollador Web Junior & Java Enthusiast</p>
-            <a href="#contacto" class="boton-cta">Contáctame</a>
-        </div>
-    </header>
+    <div class="background-animation"></div>
 
-    <section class="seccion container">
-        <h2>Mis Habilidades</h2>
-        <div class="grid-habilidades">
-            <div class="card-habilidad">
-                <i class="fa-brands fa-html5 icono"></i>
-                <h3>HTML5</h3>
-                <p>Estructura Web</p>
+    <div class="main-container">
+        
+        <header class="hero">
+            <div class="perfil-wrapper">
+                <img src="mifoto.jpg" alt="Alexis Jiménez" class="foto-perfil">
             </div>
-            <div class="card-habilidad">
-                <i class="fa-brands fa-css3-alt icono"></i>
-                <h3>CSS3</h3>
-                <p>Diseño y Estilos</p>
+            <div class="texto-hero">
+                <p class="saludo">Hola, soy</p>
+                <h1>Alexis Jiménez</h1>
+                <div class="typing-container">
+                    <span class="typing-text">Desarrollador Web</span>
+                </div>
+                <p class="bio-corta">Transformo ideas en sitios web funcionales desde Chihuahua.</p>
+                
+                <div class="botones-hero">
+                    <a href="#proyectos" class="btn-primary">Ver Proyectos</a>
+                    <a href="#contacto" class="btn-secondary">Contactar</a>
+                </div>
             </div>
-            <div class="card-habilidad">
-                <i class="fa-brands fa-java icono"></i>
-                <h3>Java</h3>
-                <p>Lógica y Backend</p>
-            </div>
-        </div>
-    </section>
+        </header>
 
-    <section class="seccion container">
-        <h2>Mis Proyectos</h2>
-        <div class="proyecto">
-            <h3>🌮 Taquería "El Rayo"</h3>
-            <p>Landing page creada para negocio local. Incluye diseño responsivo y botón directo a WhatsApp.</p>
-            <p class="tecnologias">Tecnologías: HTML, CSS, JS</p>
-           <a href="./taqueria/index.html" class="boton-ver">Ver Proyecto</a>
-        </div>
-        <div class="proyecto">
-            <img src="Barberia/barber-portada.jpg" alt="Vista previa Barbería" style="width:100%; border-radius:10px; margin-bottom:15px; height: 200px; object-fit: cover;">
+        <section id="servicios" class="seccion">
+            <h2 class="titulo-seccion">¿Qué hago?</h2>
+            <div class="grid-cards">
+                <div class="glass-card">
+                    <i class="fa-solid fa-code icono-card"></i>
+                    <h3>Desarrollo Web</h3>
+                    <p>HTML5, CSS3 y Java. Sitios rápidos y limpios.</p>
+                </div>
+                <div class="glass-card">
+                    <i class="fa-solid fa-mobile-screen icono-card"></i>
+                    <h3>Diseño Responsivo</h3>
+                    <p>Tu página se ve perfecta en celular y PC.</p>
+                </div>
+                <div class="glass-card">
+                    <i class="fa-solid fa-rocket icono-card"></i>
+                    <h3>SEO Local</h3>
+                    <p>Ayudo a que tu negocio aparezca en Google.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="proyectos" class="seccion">
+            <h2 class="titulo-seccion">Mis Proyectos</h2>
             
-            <h3>💈 Barbería "Elite"</h3>
-            <p>Sitio web premium con diseño Dark Mode (Oscuro). Incluye catálogo de servicios, precios y botón de citas.</p>
-            <p class="tecnologias">Tecnologías: HTML, CSS (Dark Mode), JS</p>
-            <a href="Barberia/index.html" class="boton-ver">Ver Proyecto</a> 
-        </div>
-        
-        <div class="proyecto">
-            <h3>💻 Mi Portafolio Personal</h3>
-            <p>Esta página que estás viendo. Diseño propio enfocado en mi marca personal.</p>
-            <p class="tecnologias">Tecnologías: HTML, CSS</p>
-        </div>
-    </section>
+            <div class="proyecto-card">
+                <div class="img-container">
+                    <img src="barberia/barber-portada.jpg" alt="Barbería Elite">
+                </div>
+                <div class="info-proyecto">
+                    <h3>💈 Barbería Elite</h3>
+                    <p>Sitio web estilo Dark Mode con catálogo de servicios.</p>
+                    <a href="./barberia/index.html" class="btn-mini">Ver Demo</a>
+                </div>
+            </div>
 
-    <footer id="contacto" class="pie-pagina">
-        <h2>¿Trabajamos juntos?</h2>
-        <p>Estoy disponible para proyectos pequeños y maquetación web.</p>
-        <div class="redes">
-        <a href="https://wa.me/5216141018461?text=Hola,%20vi%20tu%20portafolio" target="_blank">
-            <i class="fa-brands fa-whatsapp"></i> WhatsApp
-        </a> 
-        
-        <a href="https://github.com/Alexisp1217i" target="_blank">
-            <i class="fa-brands fa-github"></i> GitHub
-        </a> 
-        
-        <a href="https://www.linkedin.com/in/jesus-alexis-jimenez" target="_blank">
-            <i class="fa-brands fa-linkedin"></i> LinkedIn
-        </a>
+            <div class="proyecto-card">
+                <div class="img-container">
+                    <img src="taqueria/tacos-portada.jpg" alt="Taquería El Rayo">
+                </div>
+                <div class="info-proyecto">
+                    <h3>🌮 Taquería El Rayo</h3>
+                    <p>Landing page para restaurante con menú digital.</p>
+                    <a href="./taqueria/index.html" class="btn-mini">Ver Demo</a>
+                </div>
+            </div>
+        </section>
+
+        <footer id="contacto">
+            <h2>Hablemos de tu proyecto</h2>
+            <div class="redes-sociales">
+                <a href="https://wa.me/5216141018461" target="_blank" class="social-link whatsapp"><i class="fa-brands fa-whatsapp"></i></a>
+                <a href="https://github.com/Alexisp1217i" target="_blank" class="social-link github"><i class="fa-brands fa-github"></i></a>
+                <a href="https://www.linkedin.com/in/jesus-alexis-jimenez" target="_blank" class="social-link linkedin"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+            <p class="copyright">© 2025 Alexis Jiménez | Chihuahua, MX</p>
+        </footer>
+
     </div>
-        <p class="copyright">© 2025 Creado por mí desde Chihuahua, Mx.</p>
-    </footer>
+</body>
 
 </body>
 </html>
