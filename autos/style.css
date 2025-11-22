@@ -1,0 +1,139 @@
+/* --- ESTILOS GENERALES (DARK MODE DEPORTIVO) --- */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0f0f0f; /* Negro Profundo */
+    color: #f0f0f0; /* Texto Blanco */
+}
+
+h1, h2, h3 { font-family: 'Oswald', sans-serif; text-transform: uppercase; letter-spacing: 1px; }
+.container { max-width: 1000px; margin: 0 auto; padding: 0 20px; }
+
+/* --- PORTADA (HERO) --- */
+.hero {
+    background-size: cover; 
+    background-position: center; 
+    height: 500px;
+    display: flex; 
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+    color: white; 
+    border-bottom: 4px solid #e74c3c; /* Rojo Deportivo */
+}
+
+.hero h1 { 
+    font-size: 3.5rem; 
+    margin: 0; 
+    text-shadow: 2px 2px 10px black; 
+}
+
+.aviso { 
+    background: rgba(231, 76, 60, 0.2); 
+    border: 1px solid #e74c3c;
+    padding: 5px 15px; 
+    border-radius: 20px; 
+    display: inline-block; 
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+.boton-cta {
+    display: inline-block; 
+    background: #e74c3c; /* Rojo */
+    color: white;
+    padding: 15px 35px; 
+    text-decoration: none; 
+    font-weight: bold;
+    margin-top: 25px; 
+    border-radius: 5px; 
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+.boton-cta:hover { transform: scale(1.05); background: #c0392b; }
+
+/* --- SECCIONES --- */
+.contenido { padding: 50px 20px; background: #141414; }
+.seccion-oscura { padding: 60px 20px; text-align: center; background: #0f0f0f; border-bottom: 1px solid #333; }
+
+/* --- TARJETAS DE AUTOS --- */
+.menu-grid {
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; 
+    margin-top: 30px;
+}
+
+.tarjeta-servicio {
+    background: #1f1f1f; 
+    border-radius: 10px; 
+    overflow: hidden;
+    border: 1px solid #333;
+    transition: 0.3s;
+}
+.tarjeta-servicio:hover { 
+    transform: translateY(-5px); 
+    border-color: #e74c3c; 
+    box-shadow: 0 10px 20px rgba(231, 76, 60, 0.1);
+}
+
+.tarjeta-servicio img { 
+    width: 100%; 
+    height: 220px; 
+    object-fit: cover; 
+}
+
+.info-servicio { padding: 20px; text-align: left; }
+.info-servicio h3 { margin: 0 0 5px 0; color: white; font-size: 1.4rem;}
+.info-servicio p { margin: 0; font-size: 0.9rem; color: #aaa; }
+
+.precio { 
+    display: block; 
+    font-weight: bold; 
+    color: #e74c3c; /* Precio en Rojo */
+    margin-top: 15px; 
+    font-size: 1.5rem; 
+}
+
+.link-detalles { 
+    display: block; 
+    margin-top: 15px; 
+    color: white; 
+    text-decoration: none; 
+    font-size: 0.9rem; 
+    border: 1px solid #555; 
+    padding: 10px; 
+    text-align: center; 
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.link-detalles:hover { background: #e74c3c; border-color: #e74c3c; }
+
+/* --- FOOTER --- */
+.pie-pagina { 
+    background: #000; 
+    color: white; 
+    text-align: center; 
+    padding: 60px 20px; 
+    border-top: 4px solid #e74c3c;
+}
+
+.boton-whatsapp {
+    background-color: #25D366; 
+    color: white; 
+    padding: 15px 30px;
+    text-decoration: none; 
+    border-radius: 50px; 
+    font-size: 1.2rem; 
+    font-weight: bold;
+    display: inline-flex; 
+    align-items: center; 
+    gap: 10px; 
+    margin: 20px 0;
+    transition: 0.3s;
+}
+.boton-whatsapp:hover { transform: scale(1.05); box-shadow: 0 0 15px rgba(37, 211, 102, 0.4); }
+
+.legal { color: #555; font-size: 0.8rem; margin-top: 30px; }
