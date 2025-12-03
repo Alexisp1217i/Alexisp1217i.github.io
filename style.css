@@ -105,19 +105,69 @@ h1 { font-size: 3.5rem; margin: 0; background: linear-gradient(to right, #fff, #
 }
 .btn-mini:hover { color: var(--primary); }
 
-/* 9. FORMULARIO */
-.form-container { padding: 40px; border-radius: 20px; }
-.form-group { margin-bottom: 20px; }
-.form-group label { display: block; color: var(--secondary); margin-bottom: 8px; font-weight: bold; }
-.form-group input, .form-group textarea, .form-group select {
-    width: 100%; padding: 12px; border-radius: 10px; border: 1px solid rgba(255,255,255,0.2);
-    background: rgba(0,0,0,0.3); color: white; font-family: 'Outfit', sans-serif; outline: none; transition: 0.3s; box-sizing: border-box;
+/* 9. FORMULARIO CORREGIDO */
+.form-container {
+    padding: 40px;
+    background: rgba(20, 30, 50, 0.6); /* Fondo más oscurito para contraste */
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(79, 172, 254, 0.3); /* Borde azul neón suave */
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.3);
 }
-.form-group input:focus, .form-group textarea:focus, .form-group select:focus {
-    border-color: var(--primary); box-shadow: 0 0 10px rgba(79, 172, 254, 0.3);
-}
-.input-select option { background-color: var(--dark); color: white; }
 
+.form-group {
+    margin-bottom: 25px; /* Más espacio entre preguntas */
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    color: #4facfe; /* Azul clarito para las preguntas */
+    margin-bottom: 10px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    letter-spacing: 0.5px;
+}
+
+/* El estilo de las cajas donde escriben */
+.form-group input, 
+.form-group textarea, 
+.form-group select {
+    width: 100%;
+    padding: 15px;
+    border-radius: 12px;
+    border: 2px solid rgba(255,255,255,0.1); /* Borde sutil */
+    background: rgba(0, 0, 0, 0.4); /* Fondo NEGRO transparente (No blanco) */
+    color: white; /* Lo que escriben sale en blanco */
+    font-family: 'Outfit', sans-serif;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s;
+    box-sizing: border-box; /* Para que no se salga del cuadro */
+}
+
+/* Cuando le dan clic para escribir */
+.form-group input:focus, 
+.form-group textarea:focus, 
+.form-group select:focus {
+    border-color: #4facfe; /* Se pone azul neón */
+    box-shadow: 0 0 15px rgba(79, 172, 254, 0.4); /* Brilla */
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.input-select option {
+    background-color: #0f172a; /* Fondo oscuro para la lista desplegable */
+    color: white;
+}
+
+/* Ajuste del Botón */
+button[type="submit"] {
+    width: 100%;
+    margin-top: 10px;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
 /* 10. FOOTER */
 footer { text-align: center; padding: 60px 0; margin-top: 80px; border-top: 1px solid rgba(255,255,255,0.05); }
 .redes-sociales { display: flex; justify-content: center; gap: 25px; margin: 20px 0; }
